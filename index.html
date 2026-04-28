@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WhatsApp Backup Tool - Free Download</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 10px;
+    }
+    .logo-wrap svg { width:64px; height:64px; }
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #0d1117;
+      letter-spacing: 1px;
+    }
+    header p {
+      color: #0a5c38;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .badge {
+      display: inline-block;
+      background: #0d1117;
+      color: #25D366;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-top: 12px;
+      letter-spacing: 1px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 50px 20px 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero h2 {
+      font-size: 1.8rem;
+      color: #f0f6fc;
+      margin-bottom: 14px;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: #8b949e;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    /* ── DOWNLOAD BUTTON ── */
+    .download-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #0d1117;
+      font-size: 1.2rem;
+      font-weight: 800;
+      padding: 18px 48px;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(37,211,102,0.5);
+    }
+    .download-sub {
+      color: #555;
+      font-size: 0.85rem;
+      margin-top: 12px;
+    }
+
+    /* ── FEATURES ── */
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .section h3 {
+      font-size: 1.4rem;
+      color: #25D366;
+      margin-bottom: 24px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 12px;
+      padding: 20px;
+      transition: border-color 0.2s;
+    }
+    .feature-card:hover { border-color: #25D366; }
+    .feature-card .icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .feature-card h4 { color: #f0f6fc; margin-bottom: 6px; font-size: 1rem; }
+    .feature-card p  { color: #8b949e; font-size: 0.88rem; line-height: 1.5; }
+
+    /* ── STEPS ── */
+    .steps { display: flex; flex-direction: column; gap: 16px; }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .step-num {
+      background: #25D366;
+      color: #0d1117;
+      font-weight: 800;
+      font-size: 1rem;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-text h4 { color: #f0f6fc; margin-bottom: 4px; }
+    .step-text p  { color: #8b949e; font-size: 0.9rem; line-height: 1.5; }
+    .step-text code {
+      background: #0d1117;
+      color: #25D366;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    /* ── REQUIREMENTS ── */
+    .req-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+    }
+    .req-card {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .req-card .req-icon { font-size: 2rem; margin-bottom: 8px; }
+    .req-card h4 { color: #f0f6fc; font-size: 0.95rem; margin-bottom: 4px; }
+    .req-card a  { color: #25D366; font-size: 0.82rem; text-decoration: none; }
+    .req-card a:hover { text-decoration: underline; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid #21262d;
+      margin: 0 20px;
+    }
+
+    /* ── SCREENSHOT MOCKUP ── */
+    .mockup {
+      background: #161b22;
+      border: 1px solid #25D366;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-family: 'Consolas', monospace;
+      font-size: 0.85rem;
+    }
+    .mockup-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .dot { width:12px; height:12px; border-radius:50%; }
+    .dot.r { background:#ff5f57; }
+    .dot.y { background:#febc2e; }
+    .dot.g { background:#28c840; }
+    .mockup-title { color:#888; font-size:0.8rem; margin-left:8px; }
+    .mockup-line { padding: 2px 0; }
+    .g  { color: #3fb950; }
+    .gr { color: #25D366; font-weight:700; }
+    .b  { color: #58a6ff; }
+    .w  { color: #f0f6fc; }
+    .y  { color: #d29922; }
+    .r  { color: #ff6b6b; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #161b22;
+      border-top: 1px solid #21262d;
+      text-align: center;
+      padding: 24px;
+      color: #555;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+    footer a { color: #25D366; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-wrap">
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="32,3 58,13 58,38 32,54 6,38 6,13" fill="#0a5c38"/>
+      <polygon points="32,9 52,17 52,36 32,50 12,36 12,17" fill="#0d7a4e"/>
+      <rect x="24" y="18" width="20" height="28" rx="3" fill="white"/>
+      <rect x="26" y="21" width="16" height="18" rx="2" fill="#0a5c38"/>
+      <circle cx="34" cy="42" r="2.5" fill="#ddd"/>
+      <path d="M18 32 Q10 32 10 40 Q10 48 18 48" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="18" y1="26" x2="18" y2="36" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="18,26 14,33 22,33" fill="white"/>
+    </svg>
+    <h1>WhatsApp Backup Tool</h1>
+  </div>
+  <p>SECURE  •  FAST  •  RELIABLE</p>
+  <span class="badge">v1.0.0 — Free Download</span>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h2>Backup WhatsApp to MEmu in One Click</h2>
+  <p>
+    Automatically copies your WhatsApp data from your Android phone
+    directly into MEmu emulator's file manager.
+    No cloud. No internet required. 100% local and secure.
+  </p>
+
+  <!-- TOOL MOCKUP -->
+  <div class="mockup">
+    <div class="mockup-bar">
+      <div class="dot r"></div>
+      <div class="dot y"></div>
+      <div class="dot g"></div>
+      <span class="mockup-title">WhatsApp Backup Tool v1.0.0</span>
+    </div>
+    <div class="mockup-line g">✓  ADB detected — Ready!</div>
+    <div class="mockup-line g">✓  Phone : 10BE170EMG000MZ</div>
+    <div class="mockup-line g">✓  MEmu  : 127.0.0.1:21503</div>
+    <div class="mockup-line gr">🚀  WHATSAPP BACKUP STARTED</div>
+    <div class="mockup-line b">[STEP 1/5] Pulling WhatsApp from phone...</div>
+    <div class="mockup-line g">   ✓  Pulled in 12.4s</div>
+    <div class="mockup-line b">[STEP 2/5] Pushing to MEmu → Download/WhatsApp...</div>
+    <div class="mockup-line g">   ✓  Pushed in 8.2s</div>
+    <div class="mockup-line b">[STEP 3/5] Copying to /storage/emulated/0/WhatsApp...</div>
+    <div class="mockup-line g">   ✓  Copied successfully!</div>
+    <div class="mockup-line gr">🎉  BACKUP COMPLETE!  Time Taken: 00:42</div>
+  </div>
+
+  <a href="https://github.com/venugopal313/whatsapp-backup-tool/releases/download/v1.0.0/files.zip"
+     class="download-btn">
+    ⬇️  Download Now — Free
+  </a>
+  <p class="download-sub">Windows 10/11 • v1.0.0 • ZIP Package</p>
+</div>
+
+<hr class="divider"/>
+
+<!-- FEATURES -->
+<div class="section">
+  <h3>✨ FEATURES</h3>
+  <div class="features">
+    <div class="feature-card">
+      <div class="icon">🔍</div>
+      <h4>Auto Device Detection</h4>
+      <p>Automatically finds your Android phone and MEmu emulator.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🛡️</div>
+      <h4>100% Secure</h4>
+      <p>No internet required. All data stays on your local PC.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📊</div>
+      <h4>Progress Bar</h4>
+      <p>Visual progress bar fills as backup completes step by step.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">⏱️</div>
+      <h4>Time Tracker</h4>
+      <p>Shows exactly how long the backup process takes.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">⛔</div>
+      <h4>Cancel Anytime</h4>
+      <p>Stop the backup at any step with one click.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🖥️</div>
+      <h4>Live Console</h4>
+      <p>Real-time log shows exactly what's happening at every step.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- HOW TO USE -->
+<div class="section">
+  <h3>📋 HOW TO USE</h3>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>Download & Extract</h4>
+        <p>Download the ZIP file and extract it anywhere on your PC.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Run SETUP.bat</h4>
+        <p>Double-click <code>SETUP.bat</code> — it installs the tool and creates a Desktop shortcut automatically.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>Prepare Your Phone</h4>
+        <p>Connect phone via USB. Enable <code>USB Debugging</code> in Developer Options. Tap ALLOW on your phone screen.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">
+        <h4>Open MEmu</h4>
+        <p>Launch MEmu emulator on your PC and wait for Android to fully load.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-text">
+        <h4>Run & Backup!</h4>
+        <p>Open the tool → Click <code>Scan Devices</code> → Click <code>Start WhatsApp Backup</code> → Done!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- REQUIREMENTS -->
+<div class="section">
+  <h3>⚙️ REQUIREMENTS</h3>
+  <div class="req-grid">
+    <div class="req-card">
+      <div class="req-icon">🪟</div>
+      <h4>Windows 10 / 11</h4>
+      <a href="#">64-bit recommended</a>
+    </div>
+    <div class="req-card">
+      <div class="req-icon">🐍</div>
+      <h4>Python 3.8+</h4>
+      <a href="https://www.python.org/downloads/" target="_blank">Download Python →</a>
+    </div>
+    <div class="req-card">
+      <div class="req-icon">🔧</div>
+      <h4>ADB Platform Tools</h4>
+      <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank">Download ADB →</a>
+    </div>
+    <div class="req-card">
+      <div class="req-icon">📱</div>
+      <h4>MEmu Emulator</h4>
+      <a href="https://www.memuplay.com/" target="_blank">Download MEmu →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>WhatsApp Backup Tool v1.0.0 &nbsp;|&nbsp; Free &nbsp;|&nbsp; Windows 10/11</p>
+  <p style="margin-top:8px;">
+    <a href="https://github.com/venugopal313/whatsapp-backup-tool" target="_blank">GitHub</a>
+    &nbsp;•&nbsp;
+    <a href="#">Report Issue</a>
+    &nbsp;•&nbsp;
+    <a href="#">README</a>
+  </p>
+
+  <!-- COPYRIGHT NOTICE -->
+  <div style="margin-top:20px; padding:16px 20px; background:#0d1117; border:1px solid #21262d; border-radius:10px; max-width:700px; margin-left:auto; margin-right:auto;">
+    <p style="color:#25D366; font-weight:700; font-size:0.95rem; letter-spacing:1px;">© 2026 WhatsApp Backup Tool</p>
+    <p style="margin-top:8px; font-size:0.82rem; color:#555; line-height:1.7;">
+      All rights reserved. This software and its source code are the intellectual property of the developer.
+      Unauthorized copying, distribution, modification, or reverse engineering of this software,
+      via any medium, is strictly prohibited without prior written permission.
+    </p>
+    <p style="margin-top:8px; font-size:0.82rem; color:#555; line-height:1.7;">
+      This tool is provided <strong style="color:#8b949e;">free for personal use only</strong>.
+      Commercial use, reselling, or redistribution is not permitted.
+    </p>
+    <p style="margin-top:8px; font-size:0.78rem; color:#444;">
+      WhatsApp Backup Tool is not affiliated with, endorsed by, or connected to WhatsApp Inc., Meta Platforms Inc.,
+      or MEmu Play. All product names and trademarks are the property of their respective owners.
+    </p>
+  </div>
+
+  <p style="margin-top:16px; font-size:0.75rem; color:#333;">
+    Made with ❤️ &nbsp;|&nbsp; © 2026 WhatsApp Backup Tool. All Rights Reserved.
+  </p>
+</footer>
+
+</body>
+</html>
